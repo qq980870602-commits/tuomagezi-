@@ -5,7 +5,7 @@ cd "$(dirname "$0")"
 bt="$ANDROID_SDK_ROOT/build-tools/35.0.0"
 platform="$ANDROID_SDK_ROOT/platforms/android-35/android.jar"
 mkdir -p build/classes build/dex
-"$bt/aapt" package -f -M AndroidManifest.xml -I "$platform" -A assets -F build/base.apk
+"$bt/aapt" package -f -M AndroidManifest.xml -I "$platform" -A assets -S res -F build/base.apk
 if command -v javac >/dev/null; then
  javac -source 8 -target 8 -bootclasspath "$platform" -d build/classes src/com/pocketplanet/game/MainActivity.java
 else
@@ -18,5 +18,5 @@ cp build/base.apk build/unsigned.apk
 if [ ! -f test-signing.jks ]; then
 keytool -genkeypair -keystore test-signing.jks -storepass android -keypass android -alias pocket -keyalg RSA -keysize 2048 -validity 10000 -dname 'CN=PocketPlanet Local Test'
 fi
-"$bt/apksigner" sign --ks test-signing.jks --ks-key-alias pocket --ks-pass pass:android --key-pass pass:android --out build/PocketPlanet-1.0.apk build/aligned.apk
-"$bt/apksigner" verify --verbose build/PocketPlanet-1.0.apk
+"$bt/apksigner" sign --ks test-signing.jks --ks-key-alias pocket --ks-pass pass:android --key-pass pass:android --out build/PocketPlanet-2.0.apk build/aligned.apk
+"$bt/apksigner" verify --verbose build/PocketPlanet-2.0.apk
