@@ -1,0 +1,20 @@
+// !$*UTF8*$!
+{archiveVersion = 1; classes = {}; objectVersion = 56; objects = {
+A10000000000000000000001 = {isa = PBXProject; buildConfigurationList = A10000000000000000000010; compatibilityVersion = "Xcode 14.0"; mainGroup = A10000000000000000000002; productRefGroup = A10000000000000000000003; targets = (A10000000000000000000004,); };
+A10000000000000000000002 = {isa = PBXGroup; children = (A10000000000000000000005,A10000000000000000000006,A10000000000000000000003,); sourceTree = "<group>"; };
+A10000000000000000000003 = {isa = PBXGroup; children = (A10000000000000000000007,); name = Products; sourceTree = "<group>"; };
+A10000000000000000000004 = {isa = PBXNativeTarget; buildConfigurationList = A10000000000000000000011; buildPhases = (A10000000000000000000008,A10000000000000000000009,); buildRules = (); dependencies = (); name = PocketPlanet; productName = PocketPlanet; productReference = A10000000000000000000007; productType = "com.apple.product-type.application"; };
+A10000000000000000000005 = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PocketPlanet/main.m; sourceTree = "<group>"; };
+A10000000000000000000006 = {isa = PBXFileReference; lastKnownFileType = folder; path = PocketPlanet/Web; sourceTree = "<group>"; };
+A10000000000000000000007 = {isa = PBXFileReference; explicitFileType = wrapper.application; path = PocketPlanet.app; sourceTree = BUILT_PRODUCTS_DIR; };
+A10000000000000000000008 = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (A10000000000000000000012,); runOnlyForDeploymentPostprocessing = 0; };
+A10000000000000000000009 = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (A10000000000000000000013,); runOnlyForDeploymentPostprocessing = 0; };
+A10000000000000000000012 = {isa = PBXBuildFile; fileRef = A10000000000000000000005; };
+A10000000000000000000013 = {isa = PBXBuildFile; fileRef = A10000000000000000000006; };
+A10000000000000000000010 = {isa = XCConfigurationList; buildConfigurations = (A10000000000000000000014,A10000000000000000000015,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+A10000000000000000000011 = {isa = XCConfigurationList; buildConfigurations = (A10000000000000000000016,A10000000000000000000017,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+A10000000000000000000014 = {isa = XCBuildConfiguration; buildSettings = {CLANG_ENABLE_MODULES = YES; CLANG_ENABLE_OBJC_ARC = YES; SDKROOT = iphoneos; IPHONEOS_DEPLOYMENT_TARGET = 15.0; }; name = Debug; };
+A10000000000000000000015 = {isa = XCBuildConfiguration; buildSettings = {CLANG_ENABLE_MODULES = YES; CLANG_ENABLE_OBJC_ARC = YES; SDKROOT = iphoneos; IPHONEOS_DEPLOYMENT_TARGET = 15.0; }; name = Release; };
+A10000000000000000000016 = {isa = XCBuildConfiguration; buildSettings = {PRODUCT_NAME = "$(TARGET_NAME)"; PRODUCT_BUNDLE_IDENTIFIER = com.pocketplanet.game; INFOPLIST_FILE = PocketPlanet/Info.plist; CODE_SIGN_STYLE = Automatic; TARGETED_DEVICE_FAMILY = "1,2"; }; name = Debug; };
+A10000000000000000000017 = {isa = XCBuildConfiguration; buildSettings = {PRODUCT_NAME = "$(TARGET_NAME)"; PRODUCT_BUNDLE_IDENTIFIER = com.pocketplanet.game; INFOPLIST_FILE = PocketPlanet/Info.plist; CODE_SIGN_STYLE = Automatic; TARGETED_DEVICE_FAMILY = "1,2"; }; name = Release; };
+}; rootObject = A10000000000000000000001; }

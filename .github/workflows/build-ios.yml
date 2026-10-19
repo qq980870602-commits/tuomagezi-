@@ -1,0 +1,15 @@
+name: Build unsigned iOS IPA
+on:
+  push:
+    paths: ["ios/**", ".github/workflows/build-ios.yml"]
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: bash ios/build-unsigned.sh
+      - uses: actions/upload-artifact@v4
+        with:
+          name: PocketPlanet-unsigned-IPA
+          path: ios/output/PocketPlanet-unsigned.ipa
